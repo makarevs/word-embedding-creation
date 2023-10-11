@@ -1,6 +1,6 @@
 # Creation of word embeddings using neural networks
 
-The code in this project is used to read text and create a file with the word embeddings. I has been adopted from Medium paper with code reference, corrected to work, and equipped with the alternative (to article) description of how it wors in [doc\algo_explained.md](doc\algo_explained.md).
+The code in this project is used to read text and create a file with the word embeddings. I has been adopted from Medium paper with code reference, corrected to work, and equipped with the alternative (to article) description of how it wors in [doc/algo_explained.md](doc/algo_explained.md).
 
 The corresponding Medium paper by author of original program is:
 
