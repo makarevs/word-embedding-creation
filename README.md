@@ -1,6 +1,11 @@
 # Creation of word embeddings using neural networks
 
-The code in this project is used to read text and create a file with the word embeddings. 
+The code in this project is used to read text and create a file with the word embeddings. I has been adopted from Medium paper with code reference, corrected to work, and equipped with the alternative (to article) description of how it wors in [doc\algo_explained.md](doc\algo_explained.md).
+
+The corresponding Medium paper by author of original program is:
+
+Bujokas, E. (2020, May 30). Creating Word Embeddings: Coding the Word2Vec Algorithm in Python using Deep Learning. Medium. https://towardsdatascience.com/creating-word-embeddings-coding-the-word2vec-algorithm-in-python-using-deep-learning-b337d0ba17a8
+
 
 # Activating the virtual environment
 
@@ -23,5 +28,9 @@ Installing all the packages from the **requirements.txt** file to the virtual en
 ```
 pip install -r requirements.txt
 ```
+... or, alternatively, and to ensure program works, using the provided yaml config as:
+```
+conda env create -f embedding.yml
+```
 
-If you are using Microsoft Visual Studio code there may be some additional pop ups indiciating that some packages should be installed (linter or ikernel). 
+If you are using Microsoft Visual Studio code there may be some additional pop ups indiciating that some packages should be installed (linter or ikernel).
