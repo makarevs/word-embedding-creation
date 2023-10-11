@@ -9,7 +9,13 @@ from tqdm import tqdm
 import matplotlib.pyplot as plt
 
 # Deep learning: 
-from keras.models import Input, Model
+# from keras.models import Model, Input
+from keras.layers import Input
+from keras.models import Model
+# import keras.models
+# from keras.models import Input, Model  # original line
+# from tensorflow.keras.layers import Input
+# from tensorflow.python.keras.models import Input
 from keras.layers import Dense
 
 from scipy import sparse
@@ -78,8 +84,10 @@ for i, word_list in tqdm(enumerate(word_lists)):
     Y.append(Y_row)
 
 # Converting the matrices into a sparse format because the vast majority of the data are 0s
-X = sparse.csr_matrix(X)
-Y = sparse.csr_matrix(Y)
+# X = sparse.csr_matrix(X)
+# Y = sparse.csr_matrix(Y)
+X = np.array(X)
+Y = np.array(Y)
 
 # Defining the size of the embedding
 embed_size = 2
@@ -96,7 +104,7 @@ model.fit(
     x=X, 
     y=Y, 
     batch_size=256,
-    epochs=1000
+    epochs=10000
     )
 
 # Obtaining the weights from the neural network. 
@@ -119,6 +127,9 @@ for word in list(unique_word_dict.keys()):
     coord = embedding_dict.get(word)
     plt.scatter(coord[0], coord[1])
     plt.annotate(word, (coord[0], coord[1]))       
+
+# # Show the plot
+# plt.show()
 
 # Saving the embedding vector to a txt file
 try:
